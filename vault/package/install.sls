@@ -46,6 +46,7 @@ vault-package-install-archive-extracted:
     - overwrite: True
     - onchanges:
       - file: vault-package-install-file-managed
+    - if_missing: /opt/vault/bin/vault
 
 vault-package-install-file-symlink:
   file.symlink:
