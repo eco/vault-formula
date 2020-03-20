@@ -28,7 +28,7 @@ vault-package-gpg-file-managed-signature:
 
 vault-package-gpg-cmd-run-verify:
   cmd.run:
-    - name: gpg2 --verify --trust-model alawys /opt/vault/{{ vault.version }}_SHA256SUMS.sig /opt/vault/{{ vault.version }}_SHA256SUMS
+    - name: gpg2 --verify --trust-model always /opt/vault/{{ vault.version }}_SHA256SUMS.sig /opt/vault/{{ vault.version }}_SHA256SUMS
     - onchanges:
       - file: vault-package-install-file-managed
       - file: vault-package-gpg-file-managed-signature
