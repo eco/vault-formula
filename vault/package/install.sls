@@ -44,7 +44,7 @@ vault-package-install-archive-extracted:
     - source_hash_name: vault_{{ vault.version }}_{{ vault.platform }}.zip
     - enforce_toplevel: False
     - overwrite: True
-    - onchanges:
+    - watch:
       - file: vault-package-install-file-managed
     - if_missing: /opt/vault/bin/vault
 
